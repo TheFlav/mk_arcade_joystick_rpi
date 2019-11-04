@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-declare CURR_VER=0.1.6.1
+declare CURR_VER=0.1.6.2
 declare -a MK_VERS=(`ls /usr/src | grep mk_arcade_joystick_rpi | sort -n -r | cut -d '-' -f 2`)
 
 sudo modprobe -r mk_arcade_joystick_rpi
