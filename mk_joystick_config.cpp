@@ -121,7 +121,7 @@ void *gpio_routine(void *){ //GPIO input thread routine
 			gpio_input_enable[gpio_pin]=true; //used when user bind keys
 			if(digitalRead(gpio_pin)){gpio_input_activelow[gpio_pin]=0;}else{gpio_input_activelow[gpio_pin]=1;} //assume low as activelow
 			gpio_input_timestamp[gpio_pin]=0; //initialize timestamp
-			if(gpio_pin!=20&&gpio_pin!=21){pullUpDnControl(gpio_pin,PUD_UP);usleep(1000);} //pull all input high except of pin used for power slider, allow 1ms to set pullup register
+			if(gpio_pin!=7&&gpio_pin!=20&&gpio_pin!=21){pullUpDnControl(gpio_pin,PUD_UP);usleep(1000);} //pull all input high except of pin used for power slider, allow 1ms to set pullup register
 		}
 	}
 	

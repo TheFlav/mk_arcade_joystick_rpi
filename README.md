@@ -117,6 +117,9 @@ Other versions of mk_arcade_joystick_rpi are fully integrated in the **recalbox*
 ** Please see the [Recalbox mk_arcade_joystick_rpi](https://github.com/recalbox/mk_arcade_joystick_rpi/) repository for more info**
 
 ## Revisions
+
+- UPDATE 0.1.6.1 : Added support for Force Feedback via GPIO and/or PWM(PCA9633), see "Optional Flags" for information, note: can not be compares to a real controller due to hardware limitations, to be consider as experimental.
+
 - UPDATE 0.1.6.0 : Full integration of analog config builder, new make target (`config`) and `evTestValues.sh` as an `evtest` utility.
 
 - UPDATE 0.1.5.13 : Added ADS1015 I2C support, updated way to handle analog values, implementation the mk_joystick_config program to allow end users to easily create new configuration files.
