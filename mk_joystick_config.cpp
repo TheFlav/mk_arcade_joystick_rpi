@@ -723,7 +723,7 @@ int main(int argc, char *argv[]){ //main
 			}
 			
 			if(adc_min[adc_mapping[1]]>adc_max[adc_mapping[1]]){ //min need to be under max value
-				adc_tmp=adc_min[adc_mapping[0]]; //backup
+				adc_tmp=adc_min[adc_mapping[1]]; //backup
 				adc_min[adc_mapping[1]]=adc_max[adc_mapping[1]]; adc_max[adc_mapping[1]]=adc_tmp; //swap
 			}
 			
