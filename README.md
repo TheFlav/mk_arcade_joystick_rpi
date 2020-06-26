@@ -84,12 +84,15 @@ found in the same directory without the `.bak` extension.
 need to map the Power Slider in mk_joystick_config for correct binding behavior.*
 
 ### Usage
+**Recommended**
 - `make config`
-  - recommended, runs mk_joystick_config with recommended settings and backs up your
+  - runs mk_joystick_config with recommended settings and backs up your
     old emulationstation bindings, shuts down after use. You will be prompted to rebind keys in
     emulationstation on next system startup
+**Manual**
 - `sudo ./mk_joystick_config [-debug] [-maxnoise [60]] [-adcselect]`
   - If you need to debug or change the noise value
+  - After this, you may want to `sudo mv /opt/retropie/configs/all/emulationstation/es_input.cfg /opt/retropie/configs/all/emulationstation/es_input.cfg.bak`
 
 #### Optional Flags
 - `-debug`, enable debug messages, Recommended: off (Optional)
