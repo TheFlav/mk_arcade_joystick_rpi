@@ -88,7 +88,7 @@ need to map the Power Slider in mk_joystick_config for correct binding behavior.
   - recommended, runs mk_joystick_config with recommended settings and backs up your
     old emulationstation bindings, shuts down after use. You will be prompted to rebind keys in
     emulationstation on next system startup
-- `./mk_joystick_config [-debug] [-maxnoise [60]] [-adcselect]`
+- `sudo ./mk_joystick_config [-debug] [-maxnoise [60]] [-adcselect]`
   - If you need to debug or change the noise value
 
 #### Optional Flags
