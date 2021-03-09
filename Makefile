@@ -1,8 +1,15 @@
 obj-m := mk_arcade_joystick_rpi.o
 KVER ?= $(shell uname -r)
+CPUHW ?= $(shell grep Hardware /proc/cpuinfo)
+
 
 ifneq (,$(findstring -v7, $(KVER)))
-CFLAGS_mk_arcade_joystick_rpi.o := -DRPI2
+ ifneq (,$(findstring BCM2711, $(CPUHW)))
+  #$(info CPUHW="$(CPUHW)")
+  CFLAGS_mk_arcade_joystick_rpi.o := -DRPI4
+ else
+  CFLAGS_mk_arcade_joystick_rpi.o := -DRPI2
+ endif
 endif
 
 all:
