@@ -510,6 +510,8 @@ static int bcm2711_set_pull(unsigned int gpioPin, int type)
 
 static void setGpioPullUps(uint32_t pullUps, uint32_t pullUpsHigh)
 {
+    printk("setGpioPullUps RPi 4\n");
+
     int gpio;
 
 
@@ -525,6 +527,8 @@ static void setGpioPullUps(uint32_t pullUps, uint32_t pullUpsHigh)
 }
 #else
 static void setGpioPullUps(uint32_t pullUps, uint32_t pullUpsHigh){
+    printk("setGpioPullUps RPi 3 and below\n");
+    
     *(gpio + 37) = 0x02;
     udelay(10);
     *(gpio + 38) = pullUps;
