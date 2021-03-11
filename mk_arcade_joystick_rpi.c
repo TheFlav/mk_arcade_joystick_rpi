@@ -395,17 +395,17 @@ static struct i2c_board_info __initdata board_info[] = {{I2C_BOARD_INFO("MCP3021
 
 struct i2c_client *i2c_new_MCP3021(struct i2c_adapter *adapter, u16 address){
     struct i2c_board_info info = {I2C_BOARD_INFO("MCP3021", address),};
-    return i2c_new_client_device(adapter, &info);
+    return i2c_new_client_device(adapter, &info);//    used to be i2c_new_device(adapter, &info), but that may be deprecated now
 }
 
 struct i2c_client *i2c_new_ADS1015(struct i2c_adapter *adapter, u16 address){ //nns: add ADS1015 support
     struct i2c_board_info info = {I2C_BOARD_INFO("ADS1015", address),};
-    return i2c_new_client_device(adapter, &info);
+    return i2c_new_client_device(adapter, &info);//    used to be i2c_new_device(adapter, &info), but that may be deprecated now
 }
 
 struct i2c_client *i2c_new_PCA9633(struct i2c_adapter *adapter, u16 address){ //nns: add PCA9633 support
     struct i2c_board_info info = {I2C_BOARD_INFO("PCA9633", address),};
-    return i2c_new_client_device(adapter, &info);
+    return i2c_new_client_device(adapter, &info);//    used to be i2c_new_device(adapter, &info), but that may be deprecated now
 }
 
 
